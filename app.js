@@ -27,7 +27,8 @@ app.use('/route', feedRoutes);
 
 app.use('/auth', registration);
 
-app.get('/posts',(req,res)=>{
+app.get('/',(req,res)=>{
+  console.log("app is working fine")
 res.status(200).json({message:"app is working fine"})
 });
 // Connect to MongoDb //
