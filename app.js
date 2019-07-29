@@ -26,6 +26,10 @@ app.use((req, res, next) => {
 app.use('/route', feedRoutes);
 
 app.use('/auth', registration);
+
+app.get('/posts',(req,res)=>{
+res.status(200).json({message:"app is working fine"})
+});
 // Connect to MongoDb //
 mongoose.connect(
     'mongodb+srv://rahul_92:root@cluster0-3zopr.mongodb.net/test?retryWrites=true'
