@@ -1,5 +1,5 @@
 # NodeJsTemplateServices
-SignUp --> Method --> Post --> URL --> https://nodejs-template1.herokuapp.com/auth/signup
+SignUp --> Method --> Put --> URL --> https://nodejs-template1.herokuapp.com/auth/signup
 
 Login -- > Method --> Post --> URL --> https://nodejs-template1.herokuapp.com/auth/login
 
