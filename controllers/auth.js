@@ -26,7 +26,7 @@ exports.signup = (req, res, next) => {
       return user.save();
     })
     .then(result => {
-      res.status(201).json({ message: 'User created!', userId: result._id });
+      res.status(201).json({ message: 'User created Sucessfully', userId: result._id });
     })
     .catch(err => {
       if (!err.statusCode) {
@@ -64,7 +64,7 @@ exports.login = (req, res, next) => {
         'somesupersecretsecret',
         { expiresIn: '1h' }
       );
-      res.status(200).json({ token: token, userId: loadedUser._id.toString() });
+      res.status(200).json({ token: token, userId: loadedUser._id.toString(), message : "Login Sucessfull" });
     })
     .catch(err => {
       if (!err.statusCode) {

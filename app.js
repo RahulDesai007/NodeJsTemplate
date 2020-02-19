@@ -29,13 +29,13 @@ app.use('/auth', registration);
 
 app.get('/',(req,res)=>{
   console.log("app is working fine")
-res.status(200).json({message:"app is working fine"})
+res.status(200).json({message:"app is working fine........"})
 });
 // Connect to MongoDb //
 mongoose.connect(
     'mongodb+srv://rahul_92:root@cluster0-3zopr.mongodb.net/test?retryWrites=true'
     )
-    .then(result => {
+    .then(result => { 
         app.listen(process.env.PORT || 8000)
         console.log("Server Started at post 8000...")
     })
