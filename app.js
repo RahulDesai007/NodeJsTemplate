@@ -33,7 +33,8 @@ res.status(200).json({message:"app is working fine........"})
 });
 // Connect to MongoDb //
 mongoose.connect(
-    'mongodb+srv://rahul_92:root@cluster0-3zopr.mongodb.net/test?retryWrites=true'
+    //'mongodb+srv://rahul_92:root@cluster0-3zopr.mongodb.net/test?retryWrites=true'
+    'mongodb+srv://my_app:root@cluster0-jztih.mongodb.net/test?retryWrites=true'
     )
     .then(result => { 
         app.listen(process.env.PORT || 8000)
