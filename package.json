@@ -1,6 +1,6 @@
 {
   "name": "nodejs-template",
-  "author" : "Rahul M. Desai",
+  "author": "Rahul M. Desai",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
