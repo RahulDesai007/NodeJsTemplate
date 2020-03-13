@@ -10,11 +10,19 @@ const mongoose = require('mongoose')
 const feedRoutes = require('./routes/route');
 
 const registration = require('./routes/auth')
-
+// const session = require('express-session')
+// const MongoDBStore = require('connect-mongodb-session')(session)
+const MONGODB_URI = 'mongodb+srv://react_app:root@cluster0-6kzyn.mongodb.net/test'
 const app = express();
+
+
+
 
 // app.use(bodyParser.urlencoded()); // x-www-form-urlencoded <form>
 app.use(bodyParser.json()); // application/json
+// app.use(
+//   session({ secret: 'my secret', resave : false, saveUninitialized: false, store:store})
+// )
 // setting up CORS //
 app.use((req, res, next) => {
     res.setHeader('Access-Control-Allow-Origin', '*');
@@ -34,10 +42,10 @@ res.status(200).json({message:"app is working fine........"})
 // Connect to MongoDb //
 mongoose.connect(
     //'mongodb+srv://rahul_92:root@cluster0-3zopr.mongodb.net/test?retryWrites=true'
-    'mongodb+srv://my_app:root@cluster0-jztih.mongodb.net/test?retryWrites=true'
+    MONGODB_URI
     )
     .then(result => { 
         app.listen(process.env.PORT || 8000)
-        console.log("Server Started at post 8000...")
+        console.log("Server Started at ip "+process.env.HOST+" and port "+process.env.PORT);
     })
     .catch(err => console.log(err));
